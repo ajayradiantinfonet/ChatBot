@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <center><h1>this is chatbot page</h1><hr></center>
+        
+        {% comment %} <br>
+        User:<h3>{{mess}}</h3>
+        ChatBot:<h4>{{res}}</h4> {% endcomment %}
+
+
+        {% for d in data %} 
+        <br>user:{{ d.question }}<br>
+        
+        chatbot:{{ d.answers }}
+        <br>
+        <hr>z
+        <br>
+        {% endfor %}
+
+
+        {% csrf_token %}
+        <form method ="POST">
+          
+        <input type ="text" name= "message"><input type=submit>
+        
+        </form>
+{% comment %} 
+        <form method ="POST">
+        name:<input type ="text" name ='name'><br>
+        email:<input type ="email" name="email"><br>
+        <input type =submit> {% endcomment %}
+
+
+
+
+        
+    </body>
+</html>
+
+
+
+
+
+
